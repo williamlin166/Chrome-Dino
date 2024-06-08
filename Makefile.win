@@ -1,0 +1,58 @@
+# Project: SDL2_Devcpp
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o Barrier.o Brook.o Button.o Dino.o LTexture.o Luffy.o Ninja.o Skin.o Doraemon.o Score.o
+LINKOBJ  = main.o Barrier.o Brook.o Button.o Dino.o LTexture.o Luffy.o Ninja.o Skin.o Doraemon.o Score.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"SDL2-2.0.12/x86_64-w64-mingw32/lib" -L"SDL_bgi-2.4.2/bin/Mingw64" -L"SDL2_image-2.0.5/x86_64-w64-mingw32/lib" -L"SDL2_mixer-2.0.4/x86_64-w64-mingw32/lib" -L"SDL2_ttf-2.0.15/x86_64-w64-mingw32/lib" -lmingw32 -L/mingw64/bin -lSDL_bgi -lSDL2_ttf -lSDL2_mixer -lSDL2_image -lSDL2main -lSDL2
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"SDL2-2.0.12/x86_64-w64-mingw32/include" -I"SDL2-2.0.12/x86_64-w64-mingw32/include/SDL2" -I"SDL_bgi-2.4.2/src" -I"SDL2_image-2.0.5/x86_64-w64-mingw32/include" -I"SDL2_mixer-2.0.4/x86_64-w64-mingw32/include" -I"SDL2_ttf-2.0.15/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"SDL2-2.0.12/x86_64-w64-mingw32/include" -I"SDL2-2.0.12/x86_64-w64-mingw32/include/SDL2" -I"SDL_bgi-2.4.2/src" -I"SDL2_image-2.0.5/x86_64-w64-mingw32/include" -I"SDL2_mixer-2.0.4/x86_64-w64-mingw32/include" -I"SDL2_ttf-2.0.15/x86_64-w64-mingw32/include"
+BIN      = SDL2_Devcpp.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Barrier.o: Barrier.cpp
+	$(CPP) -c Barrier.cpp -o Barrier.o $(CXXFLAGS)
+
+Brook.o: Brook.cpp
+	$(CPP) -c Brook.cpp -o Brook.o $(CXXFLAGS)
+
+Button.o: Button.cpp
+	$(CPP) -c Button.cpp -o Button.o $(CXXFLAGS)
+
+Dino.o: Dino.cpp
+	$(CPP) -c Dino.cpp -o Dino.o $(CXXFLAGS)
+
+LTexture.o: LTexture.cpp
+	$(CPP) -c LTexture.cpp -o LTexture.o $(CXXFLAGS)
+
+Luffy.o: Luffy.cpp
+	$(CPP) -c Luffy.cpp -o Luffy.o $(CXXFLAGS)
+
+Ninja.o: Ninja.cpp
+	$(CPP) -c Ninja.cpp -o Ninja.o $(CXXFLAGS)
+
+Skin.o: Skin.cpp
+	$(CPP) -c Skin.cpp -o Skin.o $(CXXFLAGS)
+
+Doraemon.o: Doraemon.cpp
+	$(CPP) -c Doraemon.cpp -o Doraemon.o $(CXXFLAGS)
+
+Score.o: Score.cpp
+	$(CPP) -c Score.cpp -o Score.o $(CXXFLAGS)
